@@ -1,7 +1,10 @@
-<%= form_for :subscription, html: {class: 'form-inline'} do |f| %>
+<%= form_for :subscription,
+  url: subscriptions_path,
+  remote: true,
+  html: {class: 'form-inline'} do |f| %>
   <fieldset class="form-group">
-    <%= f.label :email_address %>
-    <%= f.email_field :email_address, class: 'form-control' %>
+    <%= f.label :email_address, class: 'control-label' %>
+    <%= f.email_field :email, class: 'form-control' %>
   </fieldset>
   <%= f.submit 'Subscribe', class: 'btn btn-sm' %>
 <% end %>
