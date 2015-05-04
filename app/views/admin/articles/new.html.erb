@@ -1,4 +1,8 @@
 <article class="col-md-12">
   <h2>New Article</h2>
-  <%= render 'form' %>
+  <%= form_for :article, url: admin_articles_path do |f| %>
+    <%= render 'form', form: f %>
+  <% end %>
+  <%= link_to 'Back', articles_path %>
+  <%= link_to 'Back to article admin', admin_articles_path %>
 </article>

@@ -1,3 +1,6 @@
 <article class="col-md-12">
-  <%= render 'form' %>
+  <%= form_for :article, url: admin_article_path(@article), method: :put do |f| %>
+    <%= render 'form', form: f %>
+  <% end %>
+  <%= link_to 'Back to article admin', admin_articles_path %>
 </article>
