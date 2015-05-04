@@ -1,0 +1,15 @@
+<h2>Articles</h2>
+
+<section class="row">
+  <div class="col-md-12">
+    <ol>
+      <li>
+      <% @articles.each do |article| %>
+        <h3><%= link_to article.title, article %></h3>
+        <%= link_to truncate(article.text), article %>
+        <%=  article.created_at %>
+      <% end %>
+      </li>
+    </ol>
+  </div>
+</section>
