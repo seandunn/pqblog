@@ -12,7 +12,11 @@ class Admin::ArticlesController < ApplicationController
     article.save
     redirect_to article
   end
-  
+
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   def destroy
     article = Article.find(params[:id])
     article.comments.destroy_all
