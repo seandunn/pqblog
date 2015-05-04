@@ -8,7 +8,13 @@
 </head>
 <body>
 
-<%= yield %>
+  <header id="blog-header">
+    <h1><%= link_to 'Small Blog', root_path %></h1>
+  </header>
+  
+  <main class="container">
+    <%= yield %>
+  </main>
 
 </body>
 </html>
