@@ -54,8 +54,12 @@ Rails.application.routes.draw do
   root 'articles#index'
 
   namespace :admin do
-    resources :articles
+    resources :articles, except: :show do
+      # resources :comments # for comment admin removing spam, etc
+    end
   end
 
-  resources :articles, only: [:index, :show]
+  resources :articles, only: [:index, :show] do
+    resources :comments, only: :create
+  end
 end
