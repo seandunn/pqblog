@@ -11,7 +11,7 @@
           <h3><%= link_to "#{article.title} - #{article.created_at}", article %></h3>
           <%= link_to "Edit", edit_admin_article_path(article) %> • <%= link_to "Delete", admin_article_path(article), method: :delete, data: {confirm: 'Are you sure?'} %>
           <br>
-          <%= link_to truncate(article.text), article %>
+          <%= link_to truncate(article.body), article %>
         </li>
       <% end %>
     </ul>
