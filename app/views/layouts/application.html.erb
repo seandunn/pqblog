@@ -11,8 +11,12 @@
   <header id="blog-header">
     <h1><%= link_to 'Small Blog', root_path %></h1>
   </header>
-  
+
   <main class="container">
+  <article id="email-subscription" class="row">
+    <header><%= render 'subscriptions/form' %></header>
+  </article>
+
     <%= yield %>
   </main>
 
