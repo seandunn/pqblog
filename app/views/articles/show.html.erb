@@ -8,6 +8,9 @@
 
   <section class="comments">
     <h3>Comments</h3>
+    <% if @article.comments.length.zero? %>
+        <div class="alert alert-info" role="alert"><h4>Be the first to comment.</h4></div>
+    <% else %>
       <% @article.comments.each do |comment| %>
 
         <ol>
@@ -17,6 +20,7 @@
           </li>
         </ol>
       <% end %>
+    <% end %>
 
     <br>
     <h4>New Comment</h4>
