@@ -61,6 +61,7 @@ Rails.application.routes.draw do
 
   resources :articles, only: [:index, :show] do
     resources :comments, only: :create
-    resources :subscriptions, only: [:create, :destroy]
   end
+
+  resources :subscriptions, only: [:create, :destroy]
 end
