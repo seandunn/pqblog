@@ -6,7 +6,8 @@
       <% @articles.each do |article| %>
       <li>
         <h3><%= link_to article.title, article %></h3>
-        <%= link_to truncate(article.text), article %>
+        <%= link_to truncate(article.body), article %>
+        <br>
         <%=  article.created_at %>
       </li>
       <% end %>
