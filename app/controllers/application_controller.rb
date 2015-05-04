@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   around_filter :register_event_listeners
 
   def register_event_listeners(&around_listener_block)
-    Wisper.with_listeners(ArticleListener.new) do
+    Wisper.subscribe(ArticleListener.new) do
       around_listener_block.call
     end
   end        

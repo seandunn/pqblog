@@ -14,7 +14,7 @@ RSpec.describe SubscriptionsController, type: :controller do
     end
 
     it 'should remove the subscription' do
-      expect { delete subscription_path(@subscription) }.to change(Subscription, :count)
+      expect { delete :destroy, id: @subscription.id }.to change(Subscription, :count)
     end
   end
 
