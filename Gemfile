@@ -7,8 +7,14 @@ gem 'rails', '4.2.1'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Twitter bootstrap
+gem 'bootstrap-sass', '~> 3.3.4'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
+# TODO: After JS prototyping, convert JS to CoffeeScript and remove es6 dependency.
+gem 'sprockets-es6', require: 'sprockets/es6'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -23,6 +29,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Markdown support
+gem 'redcarpet', '~>3.2.3'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -36,6 +45,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
+  gem 'rubocop', require: false
+
+  gem 'rspec-rails', '~>3.2'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
