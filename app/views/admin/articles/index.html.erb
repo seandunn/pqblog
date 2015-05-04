@@ -1,0 +1,19 @@
+<h2>Articles</h2>
+<%= button_to "New Article", new_admin_article_path, class: "btn btn-default", method: :get %>
+<div class="row">
+  <div class="col-md-12">
+    <% if @articles.length.zero? %>
+      <div class="alert alert-info" role="alert"><h3>No Articles Currently In The Blog.</h3></div>
+    <% end %>
+    <ul>
+      <% @articles.each do |article| %>
+        <li>
+          <h3><%= link_to "#{article.title} - #{article.created_at}", article %></h3>
+          <%= link_to "Edit", edit_admin_article_path(article) %> • <%= link_to "Delete", admin_article_path(article), method: :delete, data: {confirm: 'Are you sure?'} %>
+          <br>
+          <%= link_to truncate(article.text), article %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
