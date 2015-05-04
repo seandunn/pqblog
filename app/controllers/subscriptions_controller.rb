@@ -12,6 +12,11 @@ class SubscriptionsController < ApplicationController
 
   end
 
+  def destroy
+    @subscription = Subscription.find(params[:id])
+    @subscription.destroy
+  end
+
   def subscription_params
     params.require(:subscription).permit(:screen_name, :email)
   end

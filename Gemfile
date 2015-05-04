@@ -33,6 +33,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Markdown support
 gem 'redcarpet', '~>3.2.3'
 
+# Pub/Sub to avoid old observers
+gem 'wisper'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -47,6 +50,8 @@ group :development, :test do
   gem 'byebug'
 
   gem 'rubocop', require: false
+  
+  gem 'guard-rspec', require: false
 
   gem 'rspec-rails', '~>3.2'
   # Access an IRB console on exception pages or by using <%= console %> in views
