@@ -50,6 +50,8 @@ group :development, :test do
   gem 'byebug'
 
   gem 'rubocop', require: false
+  
+  gem 'guard-rspec', require: false
 
   gem 'rspec-rails', '~>3.2'
   # Access an IRB console on exception pages or by using <%= console %> in views
