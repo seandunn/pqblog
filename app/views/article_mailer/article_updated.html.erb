@@ -5,12 +5,12 @@
 </head>
 <body>
 <h1>Small Blog has a new article called <%= @article.title %></h1>
-<p>Hi <%= @email %>,
+<p>Hi <%= @subscription.email %>,
 <br>Small Blog has a new article called <%= @article.title %>.
 </p>
 <p>
 To read it just follow this link: <%= @url %>.
 </p>
-<p>To unsubscribe click here: <%= @unsubscribe_link %></p>
+<p>To unsubscribe click here: <%= link_to('Unsubscribe', subscription_url(@subscription), method: :delete) %></p>
 </body>
 </html>

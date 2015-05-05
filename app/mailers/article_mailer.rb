@@ -1,9 +1,10 @@
 class ArticleMailer < ApplicationMailer
+  default from: 'smallblog@example.com'
 
-  def article_updated(email, article)
-    @email = email
+  def article_updated(subscription, article)
+    @subscription = subscription
     @article = article
-    @unsubscribe_link = link_to('Unsubscribe', subscription_url(article), method: :delete)
-    mail(to: @email, subject: 'New article on Small blog')
+    @url = article_url(@article)
+    mail(to: @subscription.email, subject: 'New article on Small blog')
   end
 end
