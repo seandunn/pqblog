@@ -7,4 +7,4 @@ Small Blog has a new article called <%= @article.title %>.
 
 To read it just follow this link: <%= @url %>.
 
-To unsubscribe click here: <%= @unsubscribe_link %>
+To unsubscribe click here: <%= link_to('Unsubscribe', subscription_url(@article), method: :delete) %>
