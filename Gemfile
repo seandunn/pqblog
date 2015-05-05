@@ -33,8 +33,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Markdown support
 gem 'redcarpet', '~>3.2.3'
 
-# Pub/Sub to avoid old observers
-gem 'wisper'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
