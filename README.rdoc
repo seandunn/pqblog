@@ -12,7 +12,6 @@ Test blog supports:
 * Un-subscription links
 
 * Async Email notification of article updates with unsubscribe links
-  (Email config is still work in progress)
 
 * Uses Bootstrap
 
