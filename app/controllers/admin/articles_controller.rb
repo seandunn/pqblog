@@ -8,8 +8,8 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def create
-    article = Article.new(article_params)
-    article.save
+    article = Article.create(article_params)
+    ArticleEmailJob.set(wait: 20.seconds).perform_later(article)
     redirect_to article
   end
 
