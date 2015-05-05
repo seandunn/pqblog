@@ -17,6 +17,4 @@ RSpec.describe SubscriptionsController, type: :controller do
       expect { delete :destroy, id: @subscription.id }.to change(Subscription, :count)
     end
   end
-
-
 end
