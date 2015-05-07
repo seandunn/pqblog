@@ -9,7 +9,8 @@ RSpec.describe 'Article creation' do
     fill_in 'Body', with: 'BODY_TEST_SUCCESS_VALUE'
     click_button 'Save Article'
 
-    expect(page).to have_css '.alert-success', 'Article successfully saved.'
+    expect(page).to have_css '.alert-success'
+    expect(page).to have_content('Article successfully saved.')
   end
 
   it 'validates that the article has a title' do
