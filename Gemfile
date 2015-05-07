@@ -48,11 +48,19 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
+  gem 'capybara'
+  gem 'poltergeist'
+
+
   gem 'rubocop', require: false
   
-  gem 'guard-rspec', require: false
-
+  gem 'spring-commands-rspec'
+  gem 'factory_girl_rails'
   gem 'rspec-rails', '~>3.2'
+  gem 'guard-rspec', require: false
+  gem 'guard-bundler', require: false
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
