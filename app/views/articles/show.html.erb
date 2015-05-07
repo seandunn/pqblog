@@ -13,7 +13,7 @@
     <% else %>
       <% @article.comments.each do |comment| %>
 
-        <ol>
+        <ol id="comments-list">
           <li class="comment">
             <header><em><%= comment.screen_name %></em></header>
             <section class="comment-body"><%= comment.body %></section>
