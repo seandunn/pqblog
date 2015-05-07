@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Article creation' do
+RSpec.describe 'Article creation' do
   it 'informs the user of success' do
     visit '/admin/articles/new'
 
