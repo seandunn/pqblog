@@ -49,6 +49,8 @@ group :development, :test do
   gem 'byebug'
 
   gem 'capybara'
+  gem 'poltergeist'
+
 
   gem 'rubocop', require: false
   
