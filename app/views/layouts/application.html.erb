@@ -10,6 +10,10 @@
 
   <header id="blog-header">
     <h1><%= link_to 'Small Blog', root_path %></h1>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :article, msg, class: "alert alert-#{name}" %>
+    <% end %>
+
   </header>
 
   <main class="container">

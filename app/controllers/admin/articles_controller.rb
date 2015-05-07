@@ -8,19 +8,26 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def create
-    article = Article.create(article_params)
-    ArticleEmailJob.perform_later(article)
-    redirect_to article
+    @article = Article.new(article_params)
+    if @article.save
+      ArticleEmailJob.perform_later(@article)
+      flash[:success] = 'Article successfully saved.'
+      redirect_to admin_articles_path
+    else
+      render :new
+    end
   end
 
   def edit
     @article = Article.find(params[:id])
+
   end
 
   def update
     @article = Article.find(params[:id])
 
     if @article.update(article_params)
+      flash[:info] = 'Article successfully updated.'
       redirect_to edit_admin_article_path(@article)
     else
       render 'edit'
