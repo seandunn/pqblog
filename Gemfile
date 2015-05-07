@@ -53,6 +53,7 @@ group :development, :test do
   gem 'rubocop', require: false
   
   gem 'spring-commands-rspec'
+  gem 'factory_girl_rails'
   gem 'rspec-rails', '~>3.2'
   gem 'guard-rspec', require: false
   gem 'guard-bundler', require: false
