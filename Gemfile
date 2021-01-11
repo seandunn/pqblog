@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Markdown support
-gem 'redcarpet', '~>3.2.3'
+gem 'redcarpet', '~>3.5.1'
 
 gem 'delayed_job_active_record'
 
